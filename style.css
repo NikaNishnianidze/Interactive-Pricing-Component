@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,4 +11,38 @@ body {
     url(./images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-position: center 57px, 0 0;
+  font-family: "Manrope", serif;
+}
+
+.billing {
+  -webkit-appearance: none;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #ccc;
+  transition: background 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.billing::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: rgb(255, 255, 255);
+  transition: left 0.3s;
+}
+
+.billing:checked {
+  background-color: rgb(141, 221, 141);
+}
+
+.billing:checked::after {
+  left: 70%;
 }

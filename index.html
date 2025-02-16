@@ -9,5 +9,49 @@
     <script src="script.js" defer></script>
     <title>Interactive Pricing Component</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Simple, traffic-based pricing</h1>
+    <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+    <main>
+      <div class="container">
+        <div class="pricing">
+          <h3>100K PAGEVIEWS</h3>
+          <input
+            type="range"
+            min="0"
+            max="32"
+            value="1"
+            id="myRange"
+            class="range"
+          />
+          <h4 id="myPrice" class="money">$1.00 <span>/month</span></h4>
+        </div>
+        <div class="billing-options">
+          <p class="billing-info">Monthly Billing</p>
+          <input type="checkbox" id="myCheckbox" class="billing" />
+          <p class="billing-info">Yearly Billing</p>
+          <p class="discount">-25%</p>
+        </div>
+        <div class="divider"></div>
+        <div class="footer">
+          <div class="checks">
+            <input type="checkbox" name="websites" class="check-info" checked />
+            <label for="websites">Unlimited websites</label>
+            <input
+              type="checkbox"
+              name="ownership"
+              class="check-info"
+              checked
+            />
+            <label for="ownership">100% data ownership</label>
+            <input type="checkbox" name="email" class="check-info" checked />
+            <label for="email">Email reports</label>
+          </div>
+          <div class="trial-btn">
+            <button>Start my trial</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffff;
+  background-image: url(./images/pattern-circles.svg),
+    url(./images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: center 57px, 0 0;
+}

@@ -87,6 +87,14 @@ h3 {
   background: #80fff3;
 }
 
+.pricing .line {
+  position: relative;
+  width: 0%;
+  top: 48px;
+  height: 4px;
+  background-color: #a4f3eb;
+  z-index: 1;
+}
 .slider {
   position: absolute;
   left: -275px;
@@ -220,4 +228,104 @@ span {
   border-radius: 20.5px;
   padding: 12px 0;
   margin-bottom: 32px;
+}
+
+.discount2 {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(./images/pattern-circles.svg),
+      url(./images/bg-pattern.svg);
+    background-position: center 55px, center 0;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 28.25px;
+    margin-top: 104px;
+  }
+
+  h2 {
+    font-size: 15px;
+    line-height: 20.49px;
+    max-width: unset;
+    margin-top: 12px;
+  }
+
+  .container {
+    margin-top: 54px;
+    width: 540px;
+    padding: 40px 48px 32px 48px;
+  }
+
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+  }
+
+  .range {
+    order: 1;
+  }
+
+  h3 {
+    position: relative;
+    top: 0;
+    left: -160px;
+    font-size: 14px;
+    line-height: 19.12px;
+  }
+
+  .price-text {
+    position: relative;
+    top: -55px;
+    left: 145px;
+  }
+
+  .pricing input {
+    width: 444px;
+    margin-top: unset;
+  }
+
+  .billing-options {
+    margin-top: 41px;
+  }
+
+  .discount {
+    display: none;
+  }
+
+  .discount2 {
+    display: block;
+    font-size: 10px;
+    background-color: #feede8;
+    border: 1px solid #feede8;
+    border-radius: 9.5px;
+    padding: 2px 7px 3px 6px;
+    color: #ff8d68;
+  }
+  .billing-options .discount2 {
+    color: #ff8d68;
+  }
+
+  .divider {
+    width: 540px;
+    margin-top: 40px;
+  }
+
+  .checks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 125px;
+  }
+
+  .each-check {
+    justify-content: flex-start;
+  }
+
+  .pricing .line {
+    top: 74px;
+  }
 }

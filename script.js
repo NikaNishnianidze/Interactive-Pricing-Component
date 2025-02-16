@@ -2,11 +2,13 @@ let range = document.getElementById("myRange");
 let price = document.getElementById("myPrice");
 let billing = document.getElementById("billingCheckbox");
 let mySpan = document.querySelector("span");
+let line = document.querySelector(".line");
 
 range.oninput = () => {
   let value = range.value;
   price.innerHTML = `$${value}.00`;
   price.style.fontSize = "32px";
+  line.style.width = value + "%";
 };
 
 function updatePrice() {

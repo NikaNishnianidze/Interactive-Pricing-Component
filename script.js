@@ -2,14 +2,22 @@ let range = document.getElementById("myRange");
 let price = document.getElementById("myPrice");
 let billing = document.getElementById("billingCheckbox");
 let mySpan = document.querySelector("span");
-let line = document.querySelector(".line");
 
 range.oninput = () => {
   let value = range.value;
   price.innerHTML = `$${value}.00`;
   price.style.fontSize = "32px";
-  line.style.width = value + "%";
 };
+
+function updateRangeBackground() {
+  const value = range.value;
+  const percentage = ((value - range.min) / (range.max - range.min)) * 100;
+  range.style.background = `linear-gradient(to right, #80fff3 ${percentage}%, #fff ${percentage}%)`;
+}
+
+range.addEventListener("input", updateRangeBackground);
+
+updateRangeBackground();
 
 function updatePrice() {
   if (billing.checked) {

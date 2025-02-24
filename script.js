@@ -5,8 +5,13 @@ let mySpan = document.querySelector("span");
 
 range.oninput = () => {
   let value = range.value;
-  price.innerHTML = `$${value}.00`;
-  price.style.fontSize = "32px";
+  if (billing.checked) {
+    let yearly = range.value * 0.25;
+    price.innerHTML = `$${yearly}`;
+  } else {
+    price.innerHTML = `$${value}.00`;
+    price.style.fontSize = "32px";
+  }
 };
 
 function updateRangeBackground() {
